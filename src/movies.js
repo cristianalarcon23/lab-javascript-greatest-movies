@@ -91,14 +91,14 @@ console.log(orderAlphabetically);
 
 
 // BONUS - Iteration 7: Time Format - Turn duration of the movies from hours to minutes
+const newMovies = structuredClone(movies)
 function turnHoursToMinutes() {
-  newMovies = [...movies];
   for (let i = 0; i < newMovies.length; i++) {
     newMovies[i].duration = newMovies[i].duration.replace(/(h|min)/g,'').split(' ');
-    newMovies[i].duration = `${(newMovies[i].duration[0] * 60) + Number(newMovies[i].duration[1])} min`};
+    newMovies[i].duration = `${(newMovies[i].duration[0] * 60) + Number(newMovies[i].duration[1])} min`}
   return newMovies; 
 }
-console.log(turnHoursToMinutes(movies))
+console.log(turnHoursToMinutes(newMovies))
 // BONUS - Iteration 8: Best yearly score average - Best yearly score average
 function bestYearAvg() {}
 
